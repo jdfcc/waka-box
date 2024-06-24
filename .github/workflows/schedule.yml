@@ -1,9 +1,13 @@
 name: Update gist with WakaTime stats
+
 on:
   schedule:
     - cron: "0 0 * * *"
   # Manual triggers with workflow_dispatch
   workflow_dispatch:
+  # Trigger the workflow on push events
+  push:
+
 jobs:
   update-gist:
     runs-on: self-hosted
